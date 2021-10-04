@@ -1,0 +1,28 @@
+import turtle
+import random
+
+screen = turtle.Screen()
+screen.screensize(1400, 700)
+turtle.width(3)
+turtle.speed(0)
+turtle.hideturtle()
+cool_colors = ("#E5FCC2", "#9DE0AD", "#45ADA8", "#547980", "#594F4F")
+warm_colors = ("#FE4365", "#FC9D9A", "#F9CDAD", "#C8C8A9", "#83AF9B")
+lengths = (200, 150, 100, 50)
+
+
+for length in lengths:
+    for i in range(180):
+        turtle.pencolor(random.choice(cool_colors))
+        turtle.seth(i)
+        turtle.forward(length)
+        turtle.home()
+
+    for i in range(181, 360):
+        turtle.pencolor(random.choice(warm_colors))
+        turtle.seth(i)
+        turtle.forward(length)
+        turtle.home()
+
+
+screen.exitonclick()
